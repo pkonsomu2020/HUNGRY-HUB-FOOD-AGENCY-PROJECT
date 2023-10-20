@@ -2,7 +2,7 @@
 
 ![Screenshot](./images/SCREENSHOT.png)
 
-Welcome to Hungry Hub Food Agency. This is a platform where a user is able to search and make an order for all kinds of food stuffs available in various resturants using various payment methods  without visiting the specific resturant physically. The advantage of this platform is that a user is able to order every kind of foodstuffs of their own choice as this will help to avoid westage of time trying to search the specific foodstuff in a resturant. 
+Welcome to Hungry Hub Food Agency. This is a platform where a user is able to search and make an order for all kinds of food stuffs available in various resturants using various payment methods  without visiting the specific resturant physically. The advantage of this platform is that a user is able to order every kind of foodstuffs of their own choice as this will help to avoid westage of time trying to search the specific foodstuff in a resturant. You can find this project [HERE](https://hungryhubfoodagency.netlify.app/).
 
 ## Table of Contents
 
