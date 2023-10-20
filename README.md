@@ -48,6 +48,7 @@ Browse available tours, select a tour package, fill in the booking form, and cho
 - PayPal API for processing PayPal payments.
 - M-Pesa API for processing M-Pesa payments.
 - Bank Account API for processing Bank transfers payments
+- Netlify App for the deployment of this project.
 
 ## Project Structure
 
