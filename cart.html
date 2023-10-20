@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUNGRU HUB</title>
+    <link
+      rel="shortcut icon"
+      href="./images/HUNGRY_HUB_LOGO.png"
+      type="image/x-icon"
+    />
+
+    <!-- ----linked font awesome cdn---- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ----linked style.css file---- -->
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./public/css/cart.css">
+
+    <!-- ----linked media.css file---- -->
+    <link rel="stylesheet" href="./public/css/media.css" />
+  </head>
+  <body>
+    <!-- ====markup header element==== -->
+    <header class="header">
+      <!-- ---header logo--- -->
+      <div class="header-logo">
+        <a href="index.html"><img src="./images/HUNGRY_HUB_LOGO.png" alt="HUNGRY HUB" /></a>
+      </div>
+
+      <!-- ---navigation--- -->
+      <!-- <nav class="navbar">
+        <ul>
+          <li>
+            <a class="active" href="#home">HOME</a>
+          </li>
+          <li>
+            <a href="#about">ABOUT US</a>
+          </li>
+          <li>
+            <a href="#menu">MENU</a>
+          </li>
+          <li>
+            <a href="#popular">POPULAR</a>
+          </li>
+          <li>
+            <a href="#gallery">GALLERY</a>
+          </li>
+          <li>
+            <a href="#order">ORDER</a>
+          </li>
+        </ul>
+      </nav> -->
+
+      <section id="header">
+        <nav class="navbar">
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <!-- <li><a href="contact.html">Contact us</a></li> -->
+                <li><a href="login.html">LOGIN</a></li>
+                <!-- <li class="cart-icon">
+                  <a href="checkout.html">
+                      <img src="./images/SHOPPING_CART-.png" alt="Cart">
+                      <span class="cart-count">0</span>
+                  </a>
+                </li> -->
+                <div class="shopping">
+                  <img src="images/shopping.svg">
+                  <span class="quantity">0</span>
+                </div>
+            </div>
+            </ul>
+        </nav>
+    </section>
+    <!-- ---menu bar--- -->
+    <div id="menu-bar" class="fas fa-bars"></div>
+    
+    </header>
+
+    <main>
+      <section class="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-content">
+          <ul class="cart-items" id="cart-items">
+            <% cartItems.forEach(item => { %>
+              <li class="cart-item">
+                <div class="item-details">
+                  <h4><%= item.name %></h4>
+                  <p class="item-price">KSH. <%= item.price %></p>
+                </div>
+                <img src="<%= item.image %>" alt="Product Image">
+              </li>
+            <% }); %>
+          </ul>
+          <div class="cart-summary">
+            <p id="total-price">Total: KSH. 0</p>
+            <button id="remove-all-button">Remove All</button>
+            <a href="checkout.html" class="checkout-button">
+              <button id="checkout-button">Checkout</button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+       
+  
+
+
+
+<!-- ====markup footer element==== -->
+    <section>
+    <footer class="footer">
+        <div class="contact-info">
+          <h4>contact info</h4>
+          <p>
+            <i class="fas fa-location-dot"></i
+            ><span>abc, defgh.</span>
+          </p>
+          <p><i class="fas fa-envelope"></i> <span>foodweb33@gmail.com</span></p>
+          <p><i class="fas fa-phone"></i> <span>+977 9843543534</span></p>
+          <p><i class="fas fa-phone"></i> <span>+061-454676</span></p>
+        </div>
+  
+        <div class="location">
+          <h4>branch location</h4>
+          <ul>
+            <li><a href="#">place 1</a></li>
+            <li><a href="#">place 2</a></li>
+            <li><a href="#">place 3</a></li>
+            <li><a href="#">place 4</a></li>
+          </ul>
+        </div>
+  
+        <div class="quick-links">
+          <h4>quick links</h4>
+          <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#menu">menu</a></li>
+            <li><a href="#popular">popular</a></li>
+            <li><a href="#gallery">gallery</a></li>
+            <li><a href="#order">order</a></li>
+          </ul>
+        </div>
+  
+        <div class="follow-us">
+          <h4>follow us</h4>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com" target="blank">facebook</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" target="blank">instagram</a>
+            </li>
+            <li><a href="https://www.twitter.com" target="blank">twitter</a></li>
+            <li>
+              <a href="https://www.linkedin.com" target="blank">linkedin</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="copyright">
+          <p>Copyright 2022 || &copy all right reserved.</p>
+        </div>
+      </footer>
+    </section>
+
+
+
+      <!-- ----linked main.js file---- -->
+      <script src="./public/js/main.js"></script>
+      <script src="./public/js/cart.js"></script>
+      <script>
+      const cartContent = document.getElementById('cart-items');
+      const totalElement = document.getElementById('total-price');
+
+      // Function to retrieve and display cart items
+      function displayCart() {
+          const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+          let total = 0;
+
+          cartContent.innerHTML = ''; // Clear the cart content
+
+          cartItems.forEach(item => {
+              const cartItem = document.createElement('li');
+              cartItem.className = 'cart-item';
+              cartItem.innerHTML = `
+                  <h4>${item.name}</h4>
+                  <p class="item-price">KSH. ${item.price}</p>
+              `;
+
+              cartContent.appendChild(cartItem);
+              total += item.price;
+          });
+
+          totalElement.textContent = `Total: KSH. ${total}`;
+      }
+
+      displayCart(); // Call this function when the page loads to display the cart
+        
+      // function addToCart() {
+        //     window.location.href="cart.html"
+        // }
+
+        function addToCart(itemName, itemPrice, itemImage) {
+          // Create an object to represent the cart item
+          const cartItem = { name: itemName, price: itemPrice, image: itemImage };
+          // console.log(`Adding to cart: ${itemName} - KSH. ${itemPrice}`);
+
+          // Get the current cart data from local storage or initialize an empty array
+          const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+          // Add the new item to the cart
+          cartItems.push(cartItem);
+
+          // Store the updated cart data back in local storage
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+          // Update the cart quantity and display it in the shopping icon
+          const cartQuantity = cartItems.length;
+          document.querySelector('.quantity').textContent = cartQuantity;
+        }
+
+
+      // Function to remove all items from the cart
+        document.getElementById('remove-all-button').addEventListener('click', function () {
+        // Clear the cart data in local storage
+        localStorage.removeItem('cartItems');
+
+        // Clear the cart content on the page
+        document.getElementById('cart-items').innerHTML = '';
+
+        // Update the total price to 0
+        document.getElementById('total-price').textContent = 'Total: KSH. 0';
+
+        // Reset the shopping cart icon quantity to 0
+        document.querySelector('.quantity').textContent = '0';
+      });
+
+      </script>
+    </body>
+  </html>

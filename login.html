@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUNGRY HUB - Login</title>
+    <link
+      rel="shortcut icon"
+      href="./images/HUNGRY_HUB_LOGO.png"
+      type="image/x-icon"
+    />
+
+    <!-- ----linked font awesome cdn---- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ----linked style.css file---- -->
+    <link rel="stylesheet" href="./public/css/login.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+
+    <!-- ----linked media.css file---- -->
+    <link rel="stylesheet" href="./public/css/media.css" />
+  </head>
+  <body>
+    <!-- ====markup header element==== -->
+    <header class="header">
+      <!-- ---header logo--- -->
+      <div class="header-logo">
+        <a href="index.html"><img src="./images/HUNGRY_HUB_LOGO.png" alt="HUNGRY HUB" /></a>
+      </div>
+
+      <!-- ---navigation--- -->
+      <!-- <nav class="navbar">
+        <ul>
+          <li>
+            <a class="active" href="#home">HOME</a>
+          </li>
+          <li>
+            <a href="#about">ABOUT US</a>
+          </li>
+          <li>
+            <a href="#menu">MENU</a>
+          </li>
+          <li>
+            <a href="#popular">POPULAR</a>
+          </li>
+          <li>
+            <a href="#gallery">GALLERY</a>
+          </li>
+          <li>
+            <a href="#order">ORDER</a>
+          </li>
+        </ul>
+      </nav> -->
+
+      <!-- <section id="header">
+        <nav class="navbar">
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </section> -->
+
+      <!-- ---menu bar--- -->
+      <!-- <div id="menu-bar" class="fas fa-bars"></div> -->
+    </header>
+
+    <div class="container">
+        <div class="loginbg">
+            <div class="box signin">
+                <h2>Already Have an Account ?</h2>
+                <button class="signinbtn">Sign in</button>
+            </div>
+            <div class="box signup">
+                <h2>Don't Have an Account ?</h2>
+                <button class="signupbtn">Sign up</button>
+            </div>
+        </div>
+        <div class="formbx">
+            <div class="form signinform">
+                <form>
+                    <h2><img src="./images/HUNGRY_HUB_LOGO.png" alt="logo" /></h2>
+                    <h3>Sign In</h3>
+                    <input type="text" id="loginName" placeholder="Name" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <input type="button" value="Login" onclick="login()">
+                    <a href="#" class="forgot">Forgot password?</a>
+                </form>
+            </div>
+            <div class="form signupform">
+                <form>
+                    <h3>Sign up</h3>
+                    <input type="text" id="signupName" placeholder="Enter Your Name" required>
+                    <input type="text" id="signupEmail" placeholder="Email" required>
+                    <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                    <input type="password" id="signupConfirmPassword" placeholder="Confirm password" required>
+                    <input type="button" value="Sign Up" onclick="signup()">
+                </form>
+            </div>
+        </div>
+        <div class="user-section hidden">
+            <div class="avatar"></div>
+            <h2 class="username"></h2>
+            <p class="email"></p>
+            <p class="phone"></p>
+        </div>
+    </div>
+
+    
+    <!-- ====markup footer element==== -->
+    <!-- <footer class="footer">
+      <div class="contact-info">
+        <h4>contact info</h4>
+        <p>
+          <i class="fas fa-location-dot"></i
+          ><span>abc, defgh.</span>
+        </p>
+        <p><i class="fas fa-envelope"></i> <span>foodweb33@gmail.com</span></p>
+        <p><i class="fas fa-phone"></i> <span>+977 9843543534</span></p>
+        <p><i class="fas fa-phone"></i> <span>+061-454676</span></p>
+      </div>
+
+      <div class="location">
+        <h4>branch location</h4>
+        <ul>
+          <li><a href="#">place 1</a></li>
+          <li><a href="#">place 2</a></li>
+          <li><a href="#">place 3</a></li>
+          <li><a href="#">place 4</a></li>
+        </ul>
+      </div>
+
+      <div class="quick-links">
+        <h4>quick links</h4>
+        <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#menu">menu</a></li>
+          <li><a href="#popular">popular</a></li>
+          <li><a href="#gallery">gallery</a></li>
+          <li><a href="#order">order</a></li>
+        </ul>
+      </div>
+
+      <div class="follow-us">
+        <h4>follow us</h4>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com" target="blank">facebook</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="blank">instagram</a>
+          </li>
+          <li><a href="https://www.twitter.com" target="blank">twitter</a></li>
+          <li>
+            <a href="https://www.linkedin.com" target="blank">linkedin</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        <p>Copyright 2022 || &copy all right reserved.</p>
+      </div>
+    </footer> -->
+
+    <!-- ----linked main.js file---- -->
+    <script src="./public/js/main.js"></script>
+    <script>
+      const signinbtn = document.querySelector('.signinbtn');
+      const signupbtn = document.querySelector('.signupbtn');
+      const formbx = document.querySelector('.formbx');
+      const userSection = document.querySelector('.user-section');
+      const username = document.querySelector('.username');
+      const email = document.querySelector('.email');
+      const phone = document.querySelector('.phone');
+      const body = document.querySelector('body');
+  
+      // Check if the user is already logged in
+      document.addEventListener('DOMContentLoaded', function() {
+          const loggedInUser = localStorage.getItem('loggedInUser');
+          if (loggedInUser) {
+              const user = JSON.parse(loggedInUser);
+              showUserDetails(user);
+          }
+      });
+  
+      signupbtn.onclick = function(){
+          formbx.classList.add('active');
+          body.classList.add('active');
+          userSection.classList.add('hidden');
+      };
+      signinbtn.onclick = function(){
+          formbx.classList.remove('active');
+          body.classList.remove('active');
+          userSection.classList.add('hidden');
+      };
+  
+      // Function to show user details
+      function showUserDetails(user) {
+          username.textContent = user.name;
+          email.textContent = user.email;
+          phone.textContent = user.phone;
+          userSection.classList.remove('hidden');
+      }
+
+      // Function to handle login
+      function login() {
+          const loginName = document.getElementById('loginName').value;
+          const loginPassword = document.getElementById('loginPassword').value;
+
+          // Retrieve user details from local storage
+          const storedUser = localStorage.getItem('user');
+
+          if (storedUser) {
+              const user = JSON.parse(storedUser);
+
+              if (username === user.username && password === user.password) {
+                  alert('Login successful');
+              } else {
+                  alert('Invalid username or password');
+              }
+
+          } else {
+              alert('No user account found. Please sign up.');
+          }
+
+          // Redirect to home page
+          window.location.href = 'index.html';
+      }
+  
+      // Function to handle signup
+      function signup() {
+          const signupName = document.getElementById('signupName').value;
+          const signupEmail = document.getElementById('signupEmail').value;
+          const signupPhone = document.getElementById('signupPhone').value;
+          const signupPassword = document.getElementById('signupPassword').value;
+          const signupConfirmPassword = document.getElementById('signupConfirmPassword').value;
+  
+          // Validate signup credentials (e.g., check for unique email, password strength, etc.)
+  
+          const user = {
+              name: signupName,
+              email: signupEmail,
+              phone: signupPhone,
+              avatarUrl: 'path_to_avatar.jpg' // Replace with actual avatar URL
+          };
+
+           // Check if the username is already taken (for simplicity, we use the username as a unique identifier)
+          const existingUser = JSON.parse(localStorage.getItem(username));
+          if (existingUser) {
+              alert('Username already exists. Please choose a different one.');
+              return;
+         }
+  
+          // Store user details in local storage
+          localStorage.setItem('user', JSON.stringify(user));
+
+          alert('Account created successfully. You can now log in.');
+
+          showUserDetails(user);
+          // Redirect to home page
+          window.location.href = 'login.html';
+      }
+  </script>
+  </body>
+</html>

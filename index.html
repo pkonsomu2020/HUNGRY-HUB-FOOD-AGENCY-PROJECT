@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUNGRU HUB</title>
+    <link
+      rel="shortcut icon"
+      href="./images/HUNGRY_HUB_LOGO.png"
+      type="image/x-icon"
+    />
+
+    <!-- ----linked font awesome cdn---- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+
+    <!-- ----linked style.css file---- -->
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./public/css/cart.css">
+
+    <!-- ----linked media.css file---- -->
+    <link rel="stylesheet" href="./public/css/media.css" />
+  </head>
+  <body>
+    <!-- ====markup header element==== -->
+    <header class="header">
+      <!-- ---header logo--- -->
+      <div class="header-logo">
+        <a href="index.html"><img src="./images/HUNGRY_HUB_LOGO.png" alt="HUNGRY HUB" /></a>
+      </div>
+
+      <!-- ---navigation--- -->
+      <!-- <nav class="navbar">
+        <ul>
+          <li>
+            <a class="active" href="#home">HOME</a>
+          </li>
+          <li>
+            <a href="#about">ABOUT US</a>
+          </li>
+          <li>
+            <a href="#menu">MENU</a>
+          </li>
+          <li>
+            <a href="#popular">POPULAR</a>
+          </li>
+          <li>
+            <a href="#gallery">GALLERY</a>
+          </li>
+          <li>
+            <a href="#order">ORDER</a>
+          </li>
+        </ul>
+      </nav> -->
+
+      <section id="header">
+        <nav class="navbar">
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <!-- <li><a href="contact.html">Contact us</a></li> -->
+                <li><a href="login.html">LOGIN</a></li>
+                <!-- <li class="cart-icon">
+                  <a href="checkout.html">
+                      <img src="./images/SHOPPING_CART-.png" alt="Cart">
+                      <span class="cart-count">0</span>
+                  </a>
+                </li> -->
+                <!-- <div class="shopping">
+                  <img src="images/shopping.svg">
+                  <span class="quantity">0</span>
+                </div> -->
+                <div class="shopping">
+                  <img src="images/shopping.svg">
+                  <span class="quantity">0</span>
+                </div>
+                <a href="cart.html">
+                  <button class="add-to-cart-button" id="add-to-cart-button">View Cart</button>
+                </a>
+              </div>
+            </div>
+            </ul>
+        </nav>
+    </section>
+
+      <!-- ---menu bar--- -->
+      <div id="menu-bar" class="fas fa-bars"></div>
+  </header>
+
+  <!-- <div class="header-content"></div> -->
+
+    <!-- ====markup main element==== -->
+
+    <main>
+      <button id="scroll-up" class="scroll-arrow" onclick="scrollPage(-1)">&#8593;</button>
+
+      <button id="scroll-down" class="scroll-arrow" onclick="scrollPage(1)">&#8595;</button>
+
+      <!-- ====markup home section==== -->
+      <section id="home" class="home">
+        <div class="home-desc">
+          <h1>WELCOME TO HUNGRY HUB</h1>
+          <h2>we belive good food offer great smile</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut rerum
+            saepe reprehenderit temporibus architecto, hic eius aperiam
+            voluptatem nulla minus?
+          </p>
+
+          <a href="order.html"><input type="button" value="Order your food" /></a>
+        </div>
+
+        <div class="home-image">
+          <img src="./images/home-img.png" alt="Net Error" />
+        </div>
+      </section>
+
+      <!-- ====markup about section==== -->
+      <section id="about" class="about">
+        <div class="about-image">
+          <img src="./images/about-frame-img.png" alt="" />
+        </div>
+
+        <div class="about-desc">
+          <h2>a world about us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sint
+            illum similique mollitia facere maiores nemo saepe repellendus enim,
+            debitis perspiciatis dolore deleniti. Vel quos aliquid impedit
+            neque.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ipsa
+            dolore ex aut maiores perferendis a doloribus aliquid vitae natus.
+          </p>
+
+          <!-- <input type="button" value="learn more" /> -->
+          <a href="aboutus.html"><input type="button" value="Learn more" /></a>
+        </div>
+      </section>
+
+      <!-- ====markup about section==== -->
+      <section id="menu" class="menu">
+        <h2>our delicious <span>menu</span></h2>
+        <div class="catagory">
+          <input type="button" value="breakfast" />
+          <input type="button" class="active" value="lunch" />
+          <input type="button" value="dinner" />
+          <input type="button" value="desert" />
+        </div>
+
+        <div class="catagory-img">
+          <img id="c-img" src="./images/menu-lunch.jpg" alt="Net Error" />
+        </div>
+
+        <!-- ---info content 01--- -->
+        <div class="menu-content">
+          <div class="info">
+            <h3><span>01.</span>we serve best food in the country</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+              perspiciatis.
+            </p>
+          </div>
+
+          <!-- ---info content 02--- -->
+          <div class="info">
+            <h3><span>02.</span>we serve best food in the country</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+              perspiciatis.
+            </p>
+          </div>
+
+          <!-- ---info content 03--- -->
+          <div class="info">
+            <h3><span>03.</span>we serve best food in the country</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+              perspiciatis.
+            </p>
+          </div>
+
+          <!-- ---info content 04--- -->
+          <div class="info">
+            <h3><span>04.</span>we serve best food in the country</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+              perspiciatis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====markup popular section==== -->
+      <section id="popular" class="popular">
+        <h2>most <span>popular</span> foods</h2>
+
+        <div id="popular-content" class="popular-content">
+          <!-- ---card 01--- -->
+          <div class="p-card">
+            <img src="./images/product-1.jpg" alt="Net Error" />
+            <h4>Chicken KFC</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 500</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('Chicken KFC', 500)">Add to Cart</button>
+            <!-- <button class="add-to-cart-button">Add to Cart</button> -->
+          </div>
+
+          <!-- ---card 02--- -->
+          <div class="p-card">
+            <img src="./images/product-2.jpg" alt="Net Error" />
+            <h4>Tropical Cocktail with ICE</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 350</p>
+            <button  class="add-to-cart-button" onclick="addToCart('Tropical Cocktail', 350)">Add to Cart</button>
+          </div>
+
+          <!-- ---card 03--- -->
+          <div class="p-card">
+            <img src="./images/product-3.jpg" alt="Net Error" />
+            <h4>Beef Shawarma Wrap</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 250</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('Beef Shawarma', 250)">Add to Cart</button>
+          </div>
+
+          <!-- ---card 04--- -->
+          <div class="p-card">
+            <img src="./images/product-4.jpg" alt="Net Error" />
+            <h4>Spaghetti with Beef</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 650</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('Spaghetti with Beef', 650)">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====markup gallery section==== -->
+      <section id="gallery" class="gallery">
+        <h2>our food <span>gallery</span></h2>
+
+        <div class="gallery-content">
+          <!-- ---gallery card 01--- -->
+          <div class="g-card">
+            <img src="./images/img1.jpg" alt="Net Error" />
+            <h3>Delicious Cakes</h3>
+          </div>
+
+          <!-- ---gallery card 02--- -->
+          <div class="g-card">
+            <img src="./images/img2.jpg" alt="Net Error" />
+            <h3>Grilled Chopsticks</h3>
+          </div>
+
+          <!-- ---gallery card 03--- -->
+          <div class="g-card">
+            <img src="./images/img3.jpg" alt="Net Error" />
+            <h3>Raw eggs with bread</h3>
+          </div>
+
+          <!-- ---gallery card 04--- -->
+          <div class="g-card">
+            <img src="./images/img4.jpg" alt="Net Error" />
+            <h3>KFC Chicken with chips</h3>
+          </div>
+
+          <!-- ---gallery card 05--- -->
+          <div class="g-card">
+            <img src="./images/img5.jpg" alt="Net Error" />
+            <h3>Blended Juice</h3>
+          </div>
+
+          <!-- ---gallery card 06--- -->
+          <div class="g-card">
+            <img src="./images/img6.jpg" alt="Net Error" />
+            <h3>Delicious Cake</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====markup gallery section==== -->
+      <section id="order" class="order">
+        <h2>Get in <span>Touch</span></h2>
+
+        <div class="order-content">
+          <form action="#" class="order-form" autocomplete="off">
+            <input type="text" placeholder="name" required />
+            <input type="email" placeholder="email" required />
+            <input type="number" placeholder="phone Number" required />
+            <input type="subject" placeholder="Subject" required />
+            <textarea cols="30" rows="8" placeholder="Message"></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+          <img src="./images/form-img.jpg" alt="Net Error" />
+        </div>
+      </section>
+    </main>
+
+    <!-- ====markup footer element==== -->
+    <footer class="footer">
+      <div class="contact-info">
+        <h4>contact info</h4>
+        <p>
+          <i class="fas fa-location-dot"></i
+          ><span>abc, defgh.</span>
+        </p>
+        <p><i class="fas fa-envelope"></i> <span>foodweb33@gmail.com</span></p>
+        <p><i class="fas fa-phone"></i> <span>+977 9843543534</span></p>
+        <p><i class="fas fa-phone"></i> <span>+061-454676</span></p>
+      </div>
+
+      <div class="location">
+        <h4>branch location</h4>
+        <ul>
+          <li><a href="#">place 1</a></li>
+          <li><a href="#">place 2</a></li>
+          <li><a href="#">place 3</a></li>
+          <li><a href="#">place 4</a></li>
+        </ul>
+      </div>
+
+      <div class="quick-links">
+        <h4>quick links</h4>
+        <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#menu">menu</a></li>
+          <li><a href="#popular">popular</a></li>
+          <li><a href="#gallery">gallery</a></li>
+          <li><a href="#order">order</a></li>
+        </ul>
+      </div>
+
+      <div class="follow-us">
+        <h4>follow us</h4>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com" target="blank">facebook</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="blank">instagram</a>
+          </li>
+          <li><a href="https://www.twitter.com" target="blank">twitter</a></li>
+          <li>
+            <a href="https://www.linkedin.com" target="blank">linkedin</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        <p>Copyright 2022 || &copy all right reserved.</p>
+      </div>
+    </footer>
+
+    <!-- ----linked main.js file---- -->
+    <script src="./public/js/main.js"></script>
+    <script src="./public/js/cart.js"></script>
+    <script>
+      function addToCart(itemName, itemPrice) {
+        // Create an object to represent the cart item
+        const cartItem = { name: itemName, price: itemPrice };
+
+        // Get the current cart data from local storage or initialize an empty array
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Add the new item to the cart
+        cartItems.push(cartItem);
+
+        // Store the updated cart data back in local storage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        // Update the cart quantity and display it in the shopping icon
+        const cartQuantity = cartItems.length;
+        // document.getElementById('cart-quantity').textContent = cartQuantity;
+        document.querySelector('.quantity').textContent = cartQuantity;
+      }
+
+
+
+      // function addToCart() {
+      //     window.location.href="cart.html"
+      // }
+    </script>
+  </body>
+</html>

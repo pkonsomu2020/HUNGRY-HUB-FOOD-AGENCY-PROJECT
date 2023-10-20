@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Media query for small screens (e.g., smartphones) */
+@media (max-width: 768px) {
+    .container {
+      width: 90%;
+      margin: 20px;
+    }
+    
+    .formbx .form {
+      padding: 20px;
+    }
+  
+    /* Adjust other styles as needed for small screens */
+}
+
+/* Media query for larger screens (e.g., desktops) */
+@media (min-width: 1025px) {
+    .container {
+      width: 1000px;
+      margin: 80px;
+    }
+  
+    /* Adjust other styles as needed for larger screens */
+}
+
+/* Set the maximum width of the logo to 100% of the parent container */
+h2 img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background-image: url(./Images/Background/background.jpg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition:0.5s; */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(./../../images/popular-bg.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(./../../images/popular-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header {
+    max-width: 1200px;
+    width: 100%;
+    height: 6rem;
+    padding: 1rem 8rem;
+    background-color: #f0f8ff;
+    -webkit-box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
+body.active{
+    background-image: url(./Images/Background/background.jpg);
+}
+.container{
+    align-items: center;
+    position:relative;
+    width: 800px;
+    height: 500px;
+    margin: 80px;
+    background: none;
+  
+}
+.loginbg{
+    position:absolute;
+    top:40px;
+    width:100%;
+    height:420px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: #f7ca3e;
+    box-shadow: 0 5px 45px rgb(77, 76, 76);
+}
+.loginbg .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+.loginbg .box h2{
+    color:white;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: bottom 10px;
+}
+.loginbg .box button{
+    cursor: pointer;
+    padding: 10px 20px;
+    background:white;
+    color:grey;
+    font-size: 16px;
+    font-weight: 500;
+    border:none;
+}
+.formbx{
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;  
+    height:100%;
+    background:white;
+    z-index: 1000;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgb(63, 61, 61);
+    transition:0.5s ease-in-out;
+    overflow: hidden;
+}
+.formbx.active{
+    left:50%;
+}
+
+.formbx .form{
+    position:absolute;
+    left:0;
+    width:100%;
+    padding:20px;
+    transition:0.5s;
+}
+.formbx .signinform{
+    transition-delay: 0.25s;
+}
+.formbx.active .signinform{
+    left:-100%;
+    transition-delay: 0s
+}
+.formbx .signupform{
+    left:100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(./../../images/popular-bg.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(./../../images/popular-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: center;
+    background-attachment: fixed;
+}
+.formbx.active .signupform{
+    left:0;
+}
+.formbx .form form{
+    width:100%;
+    display: flex;
+    flex-direction:column;
+}
+.formbx .form form h2{
+    font-size:30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f7ca3e;
+}
+.formbx .form form h3{
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 6px;
+    font-weight: 500;
+
+}
+.formbx .form form input{
+    width: 100%;
+    margin-bottom:20px;
+    padding: 10px;
+    outline:none;
+    font-size:16px;
+    border:1px solid #333;
+}
+.formbx .form form input[type="button"]{
+    background:#f7ca3e;
+    border:none;
+    color:white;
+    max-width: 100px;
+    cursor:pointer;
+}
+.formbx .form form input[type="submit"]{
+    
+    background: #088178;
+    border:none;
+    color:white;
+    max-width: 100px;
+    cursor: pointer;
+}
+.formbx .form form .forgot{
+    color:#333;
+    text-decoration: none;
+    font-size: medium;
+}

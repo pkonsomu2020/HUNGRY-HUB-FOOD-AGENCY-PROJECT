@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HUNGRY HUB - Order</title>
+        <link
+          rel="shortcut icon"
+          href="./images/HUNGRY_HUB_LOGO.png"
+          type="image/x-icon"
+        />
+    
+        <!-- ----linked font awesome cdn---- -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+    
+        <!-- ----linked style.css file---- -->
+        <link rel="stylesheet" href="./public/css/style.css" />
+        <link rel="stylesheet" href="./public/css/cart.css">
+    
+        <!-- ----linked media.css file---- -->
+        <link rel="stylesheet" href="./public/css/media.css" />
+      </head>
+      <body>
+        <!-- ====markup header element==== -->
+        <header class="header">
+            <!-- ---header logo--- -->
+            <div class="header-logo">
+              <a href="index.html"><img src="./images/HUNGRY_HUB_LOGO.png" alt="HUNGRY HUB" /></a>
+            </div>
+      
+            <!-- ---navigation--- -->
+            <!-- <nav class="navbar">
+              <ul>
+                <li>
+                  <a class="active" href="#home">HOME</a>
+                </li>
+                <li>
+                  <a href="#about">ABOUT US</a>
+                </li>
+                <li>
+                  <a href="#menu">MENU</a>
+                </li>
+                <li>
+                  <a href="#popular">POPULAR</a>
+                </li>
+                <li>
+                  <a href="#gallery">GALLERY</a>
+                </li>
+                <li>
+                  <a href="#order">ORDER</a>
+                </li>
+              </ul>
+            </nav> -->
+    
+            <section id="header">
+              <nav class="navbar">
+                  <ul id="navbar">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="aboutus.html">About us</a></li>
+                      <li><a href="menu.html">Menu</a></li>
+                      <li><a href="order.html">Order</a></li>
+                      <li><a href="gallery.html">Gallery</a></li>
+                      <!-- <li><a href="contact.html">Contact us</a></li> -->
+                      <li><a href="login.html">LOGIN</a></li>
+                      <!-- <li class="cart-icon">
+                        <a href="checkout.html">
+                            <img src="./images/SHOPPING_CART-.png" alt="Cart">
+                            <span class="cart-count">0</span>
+                        </a>
+                      </li> -->
+                      <div class="shopping">
+                        <img src="images/shopping.svg">
+                        <span class="quantity">0</span>
+                      </div>
+                      <a href="cart.html">
+                        <button class="add-to-cart-button" id="add-to-cart-button">View Cart</button>
+                      </a>
+                  </div>
+                  </ul>
+              </nav>
+          </section>
+      
+            <!-- ---menu bar--- -->
+            <div id="menu-bar" class="fas fa-bars"></div>
+        </header>
+    
+        <div class="header-content"></div>
+
+      <!-- ====markup popular section==== -->
+      <section id="popular" class="popular">
+        <h2>most <span>popular</span> foods</h2>
+
+        <!-- <div class="popular-content"> -->
+        <div id="popular-content" class="popular-content">
+          <!-- ---card 01--- -->
+          <div class="p-card">
+            <img src="./images/product-1.jpg" alt="Net Error" />
+            <h4>Chicken KFC</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 500</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('Chicken KFC', 500, './images/product-1.jpg')">Add to Cart</button>
+            <!-- <button class="add-to-cart-button">Add to Cart</button> -->
+          </div>
+
+          <!-- ---card 02--- -->
+          <div class="p-card">
+            <img src="./images/product-2.jpg" alt="Net Error" />
+            <h4>Tropical Cocktail with ICE</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 350</p>
+            <button  class="add-to-cart-button" onclick="addToCart('Tropical Cocktail with ICE', 350)">Add to Cart</button>
+          </div>
+
+          <!-- ---card 03--- -->
+          <div class="p-card">
+            <img src="./images/product-3.jpg" alt="Net Error" />
+            <h4>Beef Shawarma Wrap</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 250</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('Beef Shawarma', 250)">Add to Cart</button>
+          </div>
+
+          <!-- ---card 04--- -->
+          <div class="p-card">
+            <img src="./images/product-4.jpg" alt="Net Error" />
+            <h4>Spaghetti with Beef</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 650</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('Spaghetti with Beef', 650)">Add to Cart</button>
+          </div>
+
+          <!-- ---card 05--- -->
+          <div class="p-card">
+            <img src="./images/BEEF PILAU WITH STEW.jpg" alt="Net Error" />
+            <h4>Beef Pilau with Stew</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 250</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('Beef pilau with stew', 250)">Add to Cart</button>
+          </div>
+
+          <!-- ---card 06--- -->
+          <div class="p-card">
+            <img src="./images/GRILLED CHICKEN WITH CHIPS.jpg" alt="Net Error" />
+            <h4>Grilled chicken with Chips</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 750</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('Grilled chicken with chips', 750)">Add to Cart</button>
+          </div>
+
+          
+          <!-- ---card 07--- -->
+          <div class="p-card">
+            <img src="./images/RICE WITH BEEF.jpg" alt="Net Error" />
+            <h4>Rice with Beef</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 300</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('Rice with beef', 300)">Add to Cart</button>
+          </div>
+
+          <!-- ---card 08--- -->
+          <div class="p-card">
+            <img src="./images/WHITE UGALI WITH BEEF.jpg" alt="Net Error" />
+            <h4>White Ugali with Beef Stew</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 200</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('White Ugali with Beef stew', 200)">Add to Cart</button>
+          </div>
+
+          <!-- ---card 09--- -->
+          <div class="p-card">
+            <img src="./images/CHAPATTI WITH BEEF.jpg" alt="Net Error" />
+            <h4>White Chapatti with Beef</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 150</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('White chapatti with beef', 250)">Add to Cart</button>
+          </div>
+
+          <!-- ---card 10--- -->
+          <div class="p-card">
+            <img src="./images/PEPORONNI PIZZA.jpg" alt="Net Error" />
+            <h4>Pepporoni Pizza</h4>
+            <div class="review">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">KSH. 1500</p>
+            <!-- <input type="button" value="add to cart" /> -->
+            <button class="add-to-cart-button" onclick="addToCart('Pepporoni Pizza', 1500)">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====markup ORDER NOW section==== -->
+      <section id="order" class="order">
+        <h2>Order <span>for Delivery</span></h2>
+          
+        <div class="order-content">
+          <form action="order.html" class="order-form" autocomplete="off">
+            <input type="text" id="name" placeholder="name" required />
+            <input type="email" id="email" placeholder="email" required />
+            <!-- <input type="password" id="password" placeholder="password" required /> -->
+            <input type="number" id="phone" placeholder="phone Number" required />
+            <textarea id="address" cols="30" rows="1" placeholder="address"></textarea>
+            <select id="food-category" required>
+              <option value="" disabled selected>Select a food category</option>
+              <option value="category1">Category 1</option>
+              <option value="category2">Category 2</option>
+              <option value="category3">Category 3</option>
+              <!-- Add more categories as needed -->
+            </select>
+          
+            <button type="submit">Order now</button>
+          </form>
+          <img src="./images/form-img.jpg" alt="Net Error" />
+        </div>
+      </section>
+
+
+    
+    
+    
+        <!-- ====markup footer element==== -->
+        <footer class="footer">
+            <div class="contact-info">
+              <h4>contact info</h4>
+              <p>
+                <i class="fas fa-location-dot"></i
+                ><span>abc, defgh.</span>
+              </p>
+              <p><i class="fas fa-envelope"></i> <span>foodweb33@gmail.com</span></p>
+              <p><i class="fas fa-phone"></i> <span>+977 9843543534</span></p>
+              <p><i class="fas fa-phone"></i> <span>+061-454676</span></p>
+            </div>
+      
+            <div class="location">
+              <h4>branch location</h4>
+              <ul>
+                <li><a href="#">place 1</a></li>
+                <li><a href="#">place 2</a></li>
+                <li><a href="#">place 3</a></li>
+                <li><a href="#">place 4</a></li>
+              </ul>
+            </div>
+      
+            <div class="quick-links">
+              <h4>quick links</h4>
+              <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#menu">menu</a></li>
+                <li><a href="#popular">popular</a></li>
+                <li><a href="#gallery">gallery</a></li>
+                <li><a href="#order">order</a></li>
+              </ul>
+            </div>
+      
+            <div class="follow-us">
+              <h4>follow us</h4>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com" target="blank">facebook</a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com" target="blank">instagram</a>
+                </li>
+                <li><a href="https://www.twitter.com" target="blank">twitter</a></li>
+                <li>
+                  <a href="https://www.linkedin.com" target="blank">linkedin</a>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="copyright">
+              <p>Copyright@2023 || All right reserved.</p>
+            </div>
+          </footer>
+      
+        <!-- ----linked main.js file---- -->
+        <script src="./public/js/main.js"></script>
+        <!-- <script src="./public/js/cart.js"></script> -->
+        <script>
+          function addToCart(itemName, itemPrice) {
+            // Create an object to represent the cart item
+            const cartItem = { name: itemName, price: itemPrice };
+
+            // Get the current cart data from local storage or initialize an empty array
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Add the new item to the cart
+            cartItems.push(cartItem);
+
+            // Store the updated cart data back in local storage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Update the cart quantity and display it in the shopping icon
+            const cartQuantity = cartItems.length;
+            // document.getElementById('cart-quantity').textContent = cartQuantity;
+            document.querySelector('.quantity').textContent = cartQuantity;
+          }
+
+
+          // cart.js
+          // This JavaScript code retrieves cart data from local storage and populates the cart content.
+
+          // const popularContent = document.getElementById("popular-content");
+          // const totalElement = document.getElementById('total-price');
+
+
+          
+          // function addToCart() {
+          //     window.location.href="cart.html"
+          // }
+        </script>
+
+<script>
+  const order = document.getElementById("order");
+
+  order.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const address = document.getElementById("address").value;
+      const foodCategory = document.getElementById("food-category").value;
+
+      if (!name || !email || !phone || !address || !foodCategory) {
+          alert("Please fill out all required fields.");
+          return;
+      }
+
+      // Store the order data in localStorage
+      const orderData = {
+          name,
+          email,
+          phone,
+          address,
+          foodCategory,
+      };
+
+      // Retrieve any existing orders from localStorage or initialize an empty array
+      const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+      // Add the new order to the orders array
+      orders.push(orderData);
+
+      // Store the updated orders array in localStorage
+      localStorage.setItem("orders", JSON.stringify(orders));
+
+      // Display a success message in a popup
+      alert("Order submitted successfully!");
+
+      // Clear the form
+      orderForm.reset();
+  });
+</script>
+
+
+    </body>
+    </html>
